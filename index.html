@@ -91,6 +91,166 @@
       flex-shrink: 0;
       filter: grayscale(1) contrast(1.05);
     }
+    @media (prefers-color-scheme: dark) {
+      .avatar { filter: none; }
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+    .headline {
+      font-size: 18.5px;
+      font-weight: 500;
+      margin: 12px 0 28px;
+    }
+    p + p { margin-top: 16px; }
+    .outlook p { color: var(--ink); }
+    .links {
+      margin-top: 36px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+    .link-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 22px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13.5px;
+    }
+    footer {
+      margin-top: 32px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    footer a {
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+    footer a:hover { color: var(--accent); }
+    footer svg { flex-shrink: 0; }
+    @media (max-width: 420px) {
+      .header-row { flex-direction: column-reverse; align-items: flex-start; gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="header-row">
+      <h1>Prabal Singh</h1>
+      <img class="avatar" src="avatar.png" alt="Prabal Singh">
+    </div>
+    <p class="headline">I make enterprise data ready for AI.</p>
+
+    <div class="outlook">
+      <p>
+        I have spent my whole career making data make sense for enterprises —
+        batch systems, ETL platforms, storage in every format, warehouses,
+        streaming, cloud architecture, and now AI. I build systems that hold up
+        in production.
+      </p>
+      <p>
+        The work has taken me across healthcare, education, and media —
+        including real-time reporting for live sporting events. Through
+        these diverse domains I learnt that the hard problems are rarely the
+        technology. They are ownership, quality, and trust in the data.
+        Engineers who learn this early build systems that last.
+      </p>
+      <p>
+        I learn by building, and I share what I learn through articles and
+        videos. These are not side activities for me. They are how I give back
+        to the community — a thank-you to my mentors — and how I test my own
+        understanding.
+      </p>
+      <p>
+        The current chapter is AI: delivering AI systems in production, making
+        enterprise data usable by machines, not just people. I believe AI will
+        move to edge devices sooner than we expect
+        and will be woven through our daily activities. When that happens,
+        curating real-time data at volume and making it available will be the
+        next big requirement. It is the biggest shift I have seen in my career,
+        and I am learning it in public, one build at a time.
+      </p>
+    </div>
+
+    <div class="links">
+      <div class="link-row">
+        <a href="https://linkedin.com/in/prblsing" target="_blank" rel="noopener noreferrer">linkedin</a>
+        <a href="https://github.com/prblsing" target="_blank" rel="noopener noreferrer">github</a>
+        <a href="https://www.youtube.com/@automations-and-ai" target="_blank" rel="noopener noreferrer">youtube</a>
+        <a href="https://www.linkedin.com/newsletters/ai-innovations-and-insights-7205501138559770624/" target="_blank" rel="noopener noreferrer">newsletter</a>
+        <a href="https://substack.com/@prblsing" target="_blank" rel="noopener noreferrer">substack</a>
+      </div>
+    </div>
+
+    <footer>
+      <a href="mailto:hello@prabalsingh.in">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 6-10 7L2 6"></path></svg>
+        hello@prabalsingh.in
+      </a>
+    </footer>
+  </main>
+</body>
+</html>  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3JL4CCBL8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X3JL4CCBL8');
+  </script>
+  <style>
+    :root {
+      --bg: #FAF9F6;
+      --ink: #211F1C;
+      --muted: #6E6960;
+      --line: #E8E4DC;
+      --accent: #14685A;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #151617;
+        --ink: #E9E7E2;
+        --muted: #9C978D;
+        --line: #2C2E30;
+        --accent: #45BFA4;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 48px 24px 56px;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .avatar {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      flex-shrink: 0;
+      filter: grayscale(1) contrast(1.05);
+    }
     h1 {
       font-size: 26px;
       font-weight: 500;
